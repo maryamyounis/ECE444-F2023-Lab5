@@ -96,7 +96,5 @@ def test_search(client):
         data=dict(title="test title", text="test text"),
         follow_redirects=True,
     )
-    rv = client.get('/search/?query=text', follow_redirects=True)
+    rv = client.get("/search/?query=text", follow_redirects=True)
     assert b"test text" in rv.data
-
-
